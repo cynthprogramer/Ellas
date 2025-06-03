@@ -9,7 +9,7 @@ Base = declarative_base()
 metadata = Base.metadata
 
 
-class Usuaria(Base):
+class Usuaria(Base): #substituir para db.model 
     __tablename__ = 'usuaria'
     __table_args__ = (
         Index('id_usuaria_UNIQUE', 'id_usuaria', unique=True),
