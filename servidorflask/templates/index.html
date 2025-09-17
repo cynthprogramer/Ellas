@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+
+<!-- =========================================================
+* Sneat - Bootstrap 5 HTML Admin Template - Pro | v1.0.0
+==============================================================
+
+* Product Page: https://themeselection.com/products/sneat-bootstrap-html-admin-template/
+* Created by: ThemeSelection
+* License: You must have a valid license purchased in order to legally use the theme for your project.
+* Copyright ThemeSelection (https://themeselection.com)
+
+=========================================================
+ -->
+<!-- beautify ignore:start -->
+<html
+  lang="en"
+  class="light-style layout-menu-fixed"
+  dir="ltr"
+  data-theme="theme-default"
+  data-assets-path="../assets/"
+  data-template="vertical-menu-template-free"
+>
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0"/>
+
+    <title>Página inicial</title>
+
+    <meta name="description" content="" />
+
+    <!-- Favicon --> 
+    <link rel="icon" type="image/x-icon" href="{{ url_for('static', filename='img/favicon/icone-logo.png') }}" />
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Public+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Icons. Uncomment required icon fonts -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='vendor/fonts/boxicons.css') }}" />
+
+    <!-- Core CSS --> 
+    <link rel="stylesheet" href="{{ url_for('static', filename='vendor/css/core.css') }}" class="template-customizer-core-css" />
+    <link rel="stylesheet" href="{{ url_for('static', filename='vendor/css/theme-default.css') }}" class="template-customizer-theme-css" />
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/demo.css') }}" />
+
+    <!-- Vendors CSS --> 
+    <link rel="stylesheet" href="{{ url_for('static', filename='vendor/libs/perfect-scrollbar') }}" />
+
+    <link rel="stylesheet" href=" {{ url_for('static', filename='vendor/libs/apex-charts/apex-charts.css') }}" />
+
+    <!-- Page CSS -->
+
+    <!-- Helpers --> 
+    <script src="{{ url_for('static', filename='vendor/js/helpers.js') }}"></script>
+
+    <!--! Template customizer & Theme config files MUST be included after core stylesheets and helpers.js in the <head> section -->
+    <!--? Config:  Mandatory theme config file contain global vars & default theme options, Set your preferred theme option in this file.  -->
+    <script src="{{ url_for('static', filename='js/config.js') }}"></script> 
+  </head>
+
+  <body>
+    <!-- Layout wrapper -->
+    <div class="layout-wrapper layout-content-navbar">
+
+      <div class="layout-container">
+        <!-- Configurações do menu -->
+        <aside id="layout-menu" class="layout-menu menu-vertical menu bg-menu-theme">
+          <div class="app-brand demo">
+            <a href="{{ url_for('index') }}" class="app-brand-link">
+              <span class="app-brand-logo demo">
+                <img src="{{ url_for('static', filename='img/illustrations/logo-lotus.svg') }}" 
+                    alt="Logo Ellas" 
+                    style="height: 40px;">
+              </span>
+              <span class="app-brand-text demo menu-text fw-bolder ms-2" style="color:#F3E09D;">
+                Ellas
+              </span>
+            </a>
+
+            <a href="javascript:void(0);" class="layout-menu-toggle menu-link text-large ms-auto d-block d-xl-none">
+              <i class="bx bx-chevron-left bx-sm align-middle"></i>
+            </a>
+          </div>
+
+          <div class="menu-inner-shadow"></div>
+
+          <ul class="menu-inner py-1">
+            <!-- Dashboard -->
+            <li class="menu-item active" style="margin-left: 20px;">
+                <a href="{{ url_for('index') }}" class="app-brand-link">
+                    <i class="menu-icon tf-icons bx bx-home-circle"></i>
+                    <div data-i18n="Analytics">MENU</div>
+                </a>
+            </li>
+
+          <!-- menu lateral -->
+           <li class="menu-item"> 
+            <a href="{{ url_for('index') }}" class="menu-link">
+              <i class="menu-icon tf-icons bx bx-home"></i>
+              <div>Página inicial</div>
+            </a>
+          </li>
+           <!-- tematicas -->
+            <li class="menu-header small text-uppercase">
+              <span class="menu-header-text">Temáticas</span>
+            </li>
+        <!-- index para pagina de dicas -->
+            <li class="menu-item">
+              <a href="{{ url_for('teste') }}" class="menu-link">
+                <i class="menu-icon tf-icons bx bx-dock-top"></i>
+                <div>Dicas</div>
+              </a>
+            </li>
+          <!-- index para pagina sobre legislação-->
+            <li class="menu-item">
+              <a href="{{ url_for('teste') }}" class="menu-link">
+                <i class="menu-icon tf-icons bx bx-lock-open-alt"></i>
+                <div>Leis</div>
+              </a>
+            </li>
+            <!-- index para pagina de ajuda-->
+            <li class="menu-item">
+              <a href="{{ url_for('teste') }}" class="menu-link">
+                <i class="menu-icon tf-icons bx bx-lock-open-alt"></i>
+                <div>Peça Ajuda</div>
+              </a>
+            </li>
+            <!-- index para pagina de noticias-->
+            <li class="menu-item">
+              <a href="{{ url_for('teste') }}" class="menu-link">
+                <i class="menu-icon tf-icons bx bx-cube-alt"></i>
+                <div>Notícias</div>
+              </a>
+            <!-- index para pagina sobre saude-->
+            <li class="menu-item">
+              <a href="{{ url_for('teste') }}" class="menu-link">
+                <i class="menu-icon tf-icons bx bx-cube-alt"></i>
+                <div>Saúde</div>
+              </a>
+
+            <!-- MAIS -->
+            <li class="menu-header small text-uppercase"><span class="menu-header-text">Mais</span></li>
+            <!-- index para a página sobre nós -->
+             <li class="menu-item"> 
+              <a href="{{ url_for('teste') }}" class="menu-link">
+                <i class="menu-icon tf-icons bx bx-box"></i>
+                <div>Sobre Nós</div>
+              </a>
+            <!-- index para a página de regras -->
+            <li class="menu-item">
+              <a href="{{ url_for('teste') }}" class="menu-link">
+                <i class="menu-icon tf-icons bx bx-box"></i>
+                <div>Regras da Comunidade</div>
+              </a>
+            </li>
+        </aside>
+        <!-- / fim Menu -->
+
+        <!-- Organanização do layout NAO EXCLUIR -->
+        <div class="layout-page"> 
+          <!-- barra de navegação -->
+          <nav
+            class="layout-navbar container-xxl navbar navbar-expand-xl navbar-detached align-items-center bg-navbar-theme"
+            id="layout-navbar">
+
+           <!-- botão de fechar e abrir o menu nao esta funcionando-->
+            <div class="layout-menu-toggle navbar-nav align-items-xl-center me-3 me-xl-0 d-xl-none">
+              <a class="nav-item nav-link px-0 me-xl-4" href="javascript:void(0)">
+                <i class="bx bx-menu bx-sm"></i>
+              </a>
+            </div>
+
+            <div class="navbar-nav-right d-flex align-items-center" id="navbar-collapse">
+              <!-- Barra de pesquisa -->
+              <div class="navbar-nav align-items-center">
+                <div class="nav-item d-flex align-items-center">
+                  <i class="bx bx-search fs-4 lh-0"></i>
+                  <input 
+                    type="search"
+                    class="form-control border-0 shadow-none" 
+                    placeholder="Pesquisar no site..."
+                    aria-label="Pesquisar..."
+                  />
+                </div>
+              </div>
+              <!-- Barra de pesquisa -->
+
+              <ul class="navbar-nav flex-row align-items-center ms-auto">
+                <!-- Place this tag where you want the button to render. -->
+                <li class="nav-item lh-1 me-3">
+                  <a
+                    class="github-button"
+                    href="{{ url_for('teste') }}"
+                    data-icon="octicon-star"
+                    data-size="large"
+                    aria-label="Star themeselection/sneat-html-admin-template-free on GitHub">Seu Perfil</a>
+                </li>
+
+                <!-- "Seu Perfil" -->
+                <li class="nav-item navbar-dropdown dropdown-user dropdown">
+                  <a class="nav-link dropdown-toggle hide-arrow" href="javascript:void(0);" data-bs-toggle="dropdown">
+                    <div class="avatar"> 
+                      <img src="{{ url_for('static', filename='img/avatars/pic1.jpg') }}" style="width: 50px; height: 50px;" class="rounded-circle" />
+                    </div>
+                  </a>
+                  <ul class="dropdown-menu dropdown-menu-end">
+                    <li>
+                      <a class="dropdown-item" href="#">
+                        <div class="d-flex">
+                          <div class="flex-shrink-0 me-3">
+                            <div class="avatar"> 
+                              <img src="{{ url_for('static', filename='img/avatars/pic1.jpg') }}" style="width: 50px; height: 50px;" class= "rounded-circle" />
+                            </div>
+                          </div>
+                          <div class="flex-grow-1">
+                            <span class="fw-semibold d-block">Cynthia Cristina</span>
+                            <small class="text-muted">Moderadora</small>
+                          </div>
+                        </div>
+                      </a>
+                    </li>
+                    <li>
+                      <div class="dropdown-divider"></div>
+                    </li>
+                    <li>
+                      <a class="dropdown-item" href="#">
+                        <i class="bx bx-user me-2"></i>
+                        <span class="align-middle">Meu Perfil</span>
+                      </a>
+                    </li>
+                    <li>
+                      <a class="dropdown-item" href="#">
+                        <i class="bx bx-cog me-2"></i>
+                        <span class="align-middle">Configurações</span>
+                      </a>
+                    </li>
+                    <li>
+                      <a class="dropdown-item" href="{{ url_for('longinbasic') }}">
+                        <i class="bx bx-power-off me-2"></i>
+                        <span class="align-middle">Log Out</span>
+                      </a>
+                    </li>
+                  </ul>
+                </li>
+                <!--/ Seu Perfil -->
+              </ul>
+            </div>
+          </nav>
+          <!-- / Navbar -->
+
+         <div class="container-xxl flex-grow-1 container-p-y">
+  
+                <!-- Container de "Bem vinda" -->
+                <div class="col-12 col-lg-10 mb-4 mx-auto">
+                  <div class="card">
+                    <div class="card-body d-flex align-items-center justify-content-between">
+                      <!-- Texto -->
+                      <div>
+                        <h5 style="color: #f2eff3;">Bem vinda ao Ellas!🎉</h5>
+                        <p style="color: #c1b8ce;">
+                          Um espaço interativo e informativo para <span class="fw-bold" style="color: #ffffff;">nós</span> mulheres do IFRN - Campus Ceará-Mirim!
+                        </p>
+                      </div>
+                      <!-- Logo do IF -->
+                      <div>
+                        <img 
+                          src="{{ url_for('static', filename='img/illustrations/png-ifcm.png') }}" 
+                          height="120" 
+                          alt="View Badge User"
+                        />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Postagem -->
+                <div class="col-12 col-lg-10 mb-4 mx-auto">
+                  <div class="card">
+                    <div class="card-body">
+                      <!-- Cabeçalho da postagem -->
+                      <div class="d-flex align-items-center mb-3">
+                        <img src="{{ url_for('static', filename='img/avatars/blue.webp') }}" 
+                            alt="Foto de perfil"
+                            class="rounded-circle me-3"
+                            width="50" height="50">
+                        <div>
+                          <h6 class="mb-0">Blue Ivy123</h6>
+                          <small class="text-muted">Postado há 2 horas</small>
+                        </div>
+                      </div>
+
+                      <!-- Texto da postagem -->
+                      <p class="card-text">
+                        textinho de blue ivy que estuda no ifcm, confia.
+                      </p>
+
+                      <!-- Botões de interação -->
+                      <div class="d-flex justify-content-around pt-3 border-top">
+                        <button class="btn btn-outline-primary btn-sm">
+                          <i class="bx bx-like"></i> Curtir
+                        </button>
+                        <button class="btn btn-outline-secondary btn-sm">
+                          <i class="bx bx-comment"></i> Comentar
+                        </button>
+                        <button class="btn btn-outline-danger btn-sm">
+                          <i class="bx bx-error"></i> Denunciar
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Postagem -->
+                <div class="col-12 col-lg-10 mb-4 mx-auto ">
+                <div class="card">
+                    <div class="card-body">
+                    <!-- Cabeçalho da postagem -->
+                    <div class="d-flex align-items-center mb-3">
+                        <!-- Foto de perfil -->
+                        <img src="{{ url_for('static', filename='img/avatars/blue.webp') }}" 
+                            alt="Foto de perfil"
+                            class="rounded-circle me-3"
+                            width="50" height="50">
+
+                        <!-- Nome e tempo -->
+                        <div>
+                        <h6 class="mb-0">Blue Ivy123</h6>
+                        <small class="text-muted">Postado há 2 horas</small>
+                        </div>
+                    </div>
+
+                    <!-- Texto da postagem -->
+                    <p class="card-text">
+                        textinho de blue ivy que estuda no ifcm, confia.
+                    </p>
+
+                    <!-- Botões de interação -->
+                    <div class="d-flex justify-content-around pt-3 border-top">
+                        <button class="btn btn-outline-primary btn-sm">
+                        <i class="bx bx-like"></i> Curtir
+                        </button>
+                        <button class="btn btn-outline-secondary btn-sm">
+                        <i class="bx bx-comment"></i> Comentar
+                        </button>
+                        <button class="btn btn-outline-danger btn-sm">
+                        <i class="bx bx-error"></i> Denunciar
+                        </button>
+                    </div>
+                    </div>
+                </div>
+                </div>
+
+                <!-- Postagem -->
+                <div class="col-12 col-lg-10 mb-4 mx-auto">
+                <div class="card">
+                    <div class="card-body">
+                    <!-- Cabeçalho da postagem -->
+                    <div class="d-flex align-items-center mb-3">
+                        <!-- Foto de perfil -->
+                        <img src="{{ url_for('static', filename='img/avatars/blue.webp') }}" 
+                            alt="Foto de perfil"
+                            class="rounded-circle me-3"
+                            width="50" height="50">
+
+                        <!-- Username e tempo -->
+                        <div>
+                        <h6 class="mb-0">Blue Ivy123</h6>
+                        <small class="text-muted">Postado há 2 horas</small>
+                        </div>
+                    </div>
+
+                    <!-- Texto da postagem -->
+                    <p class="card-text">
+                        textinho de blue ivy que estuda no ifcm, confia.
+                    </p>
+
+                    <!-- Botões de interação -->
+                    <div class="d-flex justify-content-around pt-3 border-top">
+                        <button class="btn btn-outline-primary btn-sm">
+                        <i class="bx bx-like"></i> Curtir
+                        </button>
+                        <button class="btn btn-outline-secondary btn-sm">
+                        <i class="bx bx-comment"></i> Comentar
+                        </button>
+                        <button class="btn btn-outline-danger btn-sm">
+                        <i class="bx bx-error"></i> Denunciar
+                        </button>
+                    </div>
+                    </div>
+                </div>
+                </div>
+              </div>
+      <div class="buy-now"> <a href="{{ url_for('teste') }}" target="_blank" class="btn btn-danger btn-buy-now" >Publicar algo</a > </div>
+
+    <!-- Core JS -->
+    <!-- build:js assets/vendor/js/core.js -->
+    <script src="{{ url_for('static', filename='vendor/libs/jquery/jquery.js') }}"></script>
+    <script src="{{ url_for('static', filename='vendor/libs/popper/popper.js') }}"></script>
+    <script src="{{ url_for('static', filename='vendor/js/bootstrap.js') }}"></script>
+    <script src="{{ url_for('static', filename='vendor/libs/perfect-scrollbar/perfect-scrollbar.js') }}"></script>
+    <script src="{{ url_for('static', filename='vendor/js/menu.js') }}"></script>
+   
+    <!-- endbuild -->
+
+    <!-- Vendors JS -->
+    <script src="{{ url_for('static', filename='vendor/libs/apex-charts/apexcharts.js') }}"></script>
+
+    <!-- Main JS -->
+    <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+
+    <!-- Page JS -->
+    <script src="{{ url_for('static', filename='js/dashboards-analytics.js') }}"></script>
+
+    <!-- Externo (não precisa mudar) -->
+    <script async defer src="https://buttons.github.io/buttons.js"></script>
+
+  </body>
+</html>
+
+

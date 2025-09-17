@@ -5,10 +5,10 @@ from sqlalchemy.dialects.mysql import MEDIUMTEXT
 from sqlalchemy.orm import Mapped, declarative_base, mapped_column, relationship
 from sqlalchemy.orm.base import Mapped
 from run import db
-#from .user import Usuaria
-#from .denuncia import Denuncia
-#from .postagem_removida import PostagemRemovida
-#from .postagem import Postagem
+# from .user import Usuaria
+# from .denuncia import Denuncia
+# from .postagem_removida import PostagemRemovida
+# from .postagem import Postagem
 
 Base = declarative_base()
 metadata = Base.metadata

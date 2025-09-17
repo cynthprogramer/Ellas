@@ -6,10 +6,10 @@ from sqlalchemy.orm import Mapped, declarative_base, mapped_column, relationship
 from sqlalchemy.orm.base import Mapped
 from run import db
 #importando as classes 
-#from .user import Usuaria
-#from .postagem import Postagem
-#from .comentario import Comentario
-#from .avaliacao import Avaliacao
+# from .user import Usuaria
+# from .postagem import Postagem
+# from .comentario import Comentario
+# from .avaliacao import Avaliacao
 
 
 Base = declarative_base()

@@ -1,3 +1,8 @@
+from flask import Flask
+
+app = Flask(__name__)
+
+
 from .user import Usuaria
 from .postagem import Postagem
 from .postagem_removida import PostagemRemovida

@@ -5,9 +5,9 @@ from sqlalchemy.dialects.mysql import MEDIUMTEXT
 from sqlalchemy.orm import Mapped, declarative_base, mapped_column, relationship
 from sqlalchemy.orm.base import Mapped
 from run import db
-#from .avaliacao import Avaliacao
-#from .user import Usuaria
-#from .postagem import Postagem
+# from .avaliacao import Avaliacao
+# from .user import Usuaria
+# from .postagem import Postagem
 
 
 Base = declarative_base()
