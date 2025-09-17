@@ -69,15 +69,38 @@
 
   <body>
     <body>
-  <!-- Layout em duas colunas -->
+  <!-- layout em duas colunas -->
   <div class="page-container d-flex">
-    <!-- Coluna esquerda (ilustração encostada à esquerda e no final da tela) -->
+
+    <!-- coluna esquerda (ilustração encostada à esquerda e no final da tela) -->
       <div class="left-side d-flex align-items-end justify-content-start w-60" 
-          style="background-color:#542562; height: 100vh; overflow: hidden;">
+          style="background-color:#542562; height: 100vh; position: relative;">
+          <!-- Logo + texto Ellas + IFCM no canto superior esquerdo -->
+    <div style="position: absolute; top: 20px; left: 20px; display: flex; flex-direction: column; align-items: flex-start; gap: 10px;">
+      <!-- logo Ellas -->
+      <div style="display: flex; align-items: center;">
+        <span class="app-brand-logo demo">
+          <img src="{{ url_for('static', filename='img/illustrations/logo-lotus.svg') }}" 
+               alt="Logo Ellas" 
+               style="height: 60px;">
+        </span>
+        <span class="app-brand-text demo menu-text fw-bolder ms-2" 
+              style="color:#F3E09D; font-size: 3rem;">
+          Ellas
+        </span>
+      </div>
+      <!-- logo do ifcm -->
+      <div>
+        <img src="{{ url_for('static', filename='img/illustrations/ifcm-horizontal.png') }}" 
+             alt="Logo IF"
+             style="height: 40px;">
+      </div>
+    </div>
+        <!-- ilustração -->
         <img src="{{ url_for('static', filename='img/illustrations/algo3.png') }}" 
             alt="Ellas Logo" 
             class="img-fluid" 
-            style="width: auto; height: 60%; object-fit: contain;">
+            style="width: auto; height: 80%; object-fit: contain;">
       </div>
 
 
@@ -109,7 +132,7 @@
               class="form-control input-ellas"
               id="email"
               name="username"
-              placeholder="Digite como devemos te chamar"
+              placeholder="Digite como devemos te chamar (opcioanal)"
             />
           </div>
 
@@ -142,7 +165,6 @@
               </p>
             </div>
           </div>
-          <!-- Register Card -->
         </div>
       </div>
     </div>

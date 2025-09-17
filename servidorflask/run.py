@@ -50,7 +50,7 @@ def noticacaoes():
 def connections():
     return render_template("pages-account-settings-connections.html")
 
-@app.route("/loginbasic")
+@app.route("/login")
 def longinbasic():
     return render_template("auth-login-basic.html")
 
