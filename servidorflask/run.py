@@ -51,7 +51,7 @@ def noticacaoes():
 def connections():
     return render_template("pages-account-settings-connections.html")
 
-@app.route("/login")
+@app.route("/loginbasic")
 def longinbasic():
     return render_template("auth-login-basic.html")
 
@@ -194,16 +194,14 @@ def tablesbasic():
 @app.route("/login", methods=['GET', 'POST'])
 def login():
     formulario = LoginForm()
-    url_foto = ""
     if formulario.validate_on_submit():
         resposta = LoginController.login(formulario)
-        print(resposta)
-        url_foto = resposta['foto']
         if resposta['sexo'] == 'M':
             print('nao pode logar')
         else:
             print('pode logar')
-    return render_template('auth-login-basic.html', title='Login', form = formulario, url_foto = url_foto)
+            return render_template("index.html", usuario = resposta)
+    return render_template('auth-login-basic.html', title='Login', form = formulario)
 
 
 from app import models
