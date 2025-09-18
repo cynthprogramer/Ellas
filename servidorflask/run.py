@@ -1,7 +1,8 @@
-from flask import Flask, render_template
+from flask import Flask, render_template, redirect, url_for
 from flask_sqlalchemy import SQLAlchemy
 from config import Config
-
+from app.controllers.login_controller import LoginController
+from app.forms.login_form import LoginForm
 
 
 app = Flask(__name__)
@@ -189,6 +190,20 @@ def formhorizontal():
 def tablesbasic():
     return render_template("tables-basic.html")
 
+
+@app.route("/login", methods=['GET', 'POST'])
+def login():
+    formulario = LoginForm()
+    url_foto = ""
+    if formulario.validate_on_submit():
+        resposta = LoginController.login(formulario)
+        print(resposta)
+        url_foto = resposta['foto']
+        if resposta['sexo'] == 'M':
+            print('nao pode logar')
+        else:
+            print('pode logar')
+    return render_template('auth-login-basic.html', title='Login', form = formulario, url_foto = url_foto)
 
 
 from app import models
