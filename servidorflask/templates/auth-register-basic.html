@@ -69,13 +69,40 @@
 
   <body>
     <body>
-  <!-- Layout em duas colunas -->
+  <!-- layout em duas colunas -->
   <div class="page-container d-flex">
-    
-    <!-- Coluna esquerda (ilustração) -->
-    <div class="left-side d-flex align-items-center justify-content-center w-60 p-4" style="background-color:#542562;">
-      <img src="{{ url_for('static', filename='img/illustrations/algo2.png') }}" alt="Ellas Logo" class="img-fluid" style="width: 100%">
+
+    <!-- coluna esquerda (ilustração encostada à esquerda e no final da tela) -->
+      <div class="left-side d-flex align-items-end justify-content-start w-60" 
+          style="background-color:#542562; height: 100vh; position: relative;">
+          <!-- Logo + texto Ellas + IFCM no canto superior esquerdo -->
+    <div style="position: absolute; top: 20px; left: 20px; display: flex; flex-direction: column; align-items: flex-start; gap: 10px;">
+      <!-- logo Ellas -->
+      <div style="display: flex; align-items: center;">
+        <span class="app-brand-logo demo">
+          <img src="{{ url_for('static', filename='img/illustrations/logo-lotus.svg') }}" 
+               alt="Logo Ellas" 
+               style="height: 60px;">
+        </span>
+        <span class="app-brand-text demo menu-text fw-bolder ms-2" 
+              style="color:#F3E09D; font-size: 3rem;">
+          Ellas
+        </span>
+      </div>
+      <!-- logo do ifcm -->
+      <div>
+        <img src="{{ url_for('static', filename='img/illustrations/ifcm-horizontal.png') }}" 
+             alt="Logo IF"
+             style="height: 40px;">
+      </div>
     </div>
+        <!-- ilustração -->
+        <img src="{{ url_for('static', filename='img/illustrations/algo3.png') }}" 
+            alt="Ellas Logo" 
+            class="img-fluid" 
+            style="width: auto; height: 80%; object-fit: contain;">
+      </div>
+
 
     <!-- Coluna direita (formulário) -->
     <div class="right-side d-flex align-items-center justify-content-center w-50 p-4">
@@ -83,7 +110,7 @@
         <h4 class="mb-2" style="color: #f2eff3">Sua jornada de autoconhecimento <span  class="fw-bold">continua</span> aqui!</h4>
         <p class="mb-4" style="color: #f2eff3">Faça cadastro com suas credenciais do SUAP e entre em uma comunidade exclusiva para mulheres do IFRN-CM!</p>
 
-        <!-- Formulário -->
+        <!-- Formulário de cadastro -->
         <form id="formAuthentication" action="{{ url_for('index') }}" method="POST">
           
           <div class="mb-3">
@@ -99,24 +126,13 @@
           </div>
 
           <div class="mb-3">
-            <label for="email" class="form-label">Email</label>
-            <input
-              type="email"
-              class="form-control input-ellas"
-              id="email"
-              name="email"
-              placeholder="Digite seu email escolar"
-            />
-          </div>
-
-          <div class="mb-3">
             <label for="email" class="form-label">Nome de usuária</label>
             <input
               type="email"
               class="form-control input-ellas"
               id="email"
               name="username"
-              placeholder="Digite como devemos te chamar"
+              placeholder="Digite como devemos te chamar (opcioanal)"
             />
           </div>
 
@@ -149,7 +165,6 @@
               </p>
             </div>
           </div>
-          <!-- Register Card -->
         </div>
       </div>
     </div>
