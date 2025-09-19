@@ -100,12 +100,13 @@
                 </a>
               </div>
               <!-- /Logo -->
-              <h4 class="mb-2">Bem vinda de volta! 👋</h4>
-              <p class="mb-4">Preencha com suas informações de cadastro para entrar na plataforma.</p>
+            <h4 class="mb-2" style="color: #f2eff3">Bem vinda de volta! 👋</h4>
+            <p class="mb-4" style="color: #f2eff3">Faça login com suas credenciais do SUAP e entre na exclusiva para mulheres do IFRN-CM!</p>
+
 
               <form id="formAuthentication" class="mb-3" action="" method="POST">
                 {{ form.hidden_tag() }}
-                <div class="mb-3">
+                <div class="mb-3 form-label">
                   {{form.matricula.label(for='matricula', class='form-label')}}
                   {{form.matricula(id='matricula', class='form-control', autofocus='autofocus')}}
                 </div>
@@ -117,8 +118,8 @@
                     {{form.senha(size=32, id='password', class='form-control')}}
                   </div>
                 </div>
-                <div class="mb-3">
-                  {{form.submit(class='btn btn-primary d-grid w-100')}}
+                <div class="text-center">
+                  {{form.submit(class='btn-ellas')}}
                 </div>
               </form>
 
@@ -130,15 +131,6 @@
     </div>
 
     <!-- / Content -->
-
-    <div class="buy-now">
-      <a
-        href="https://themeselection.com/products/sneat-bootstrap-html-admin-template/"
-        target="_blank"
-        class="btn btn-danger btn-buy-now"
-        >Upgrade to Pro</a
-      >
-    </div>
 
     <!-- Core JS -->
     <!-- build:js assets/vendor/js/core.js -->

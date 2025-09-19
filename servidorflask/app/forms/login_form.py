@@ -5,4 +5,4 @@ from wtforms.validators import DataRequired
 class LoginForm(FlaskForm):
     matricula = StringField('Matrícula', validators=[DataRequired()])
     senha = PasswordField('Senha', validators=[DataRequired()])
-    submit = SubmitField('Entrar')
+    submit = SubmitField('Entrar na conta')

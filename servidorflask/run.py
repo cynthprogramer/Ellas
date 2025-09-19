@@ -1,4 +1,4 @@
-from flask import Flask, render_template, redirect, url_for
+from flask import Flask, render_template, redirect, url_for, session #precisei importar o session pra roda na rota do index
 from flask_sqlalchemy import SQLAlchemy
 from config import Config
 from app.controllers.login_controller import LoginController
@@ -10,9 +10,10 @@ app.config.from_object(Config)
 
 db = SQLAlchemy(app)
 
-@app.route("/")
+@app.route('/') #pra corrigir o erro que tava dando erro em 'usuario"
 def index():
-    return render_template("index.html")
+    usuario = session.get('usuario', {'identificacao': 'usuario'})
+    return render_template("index.html", usuario=usuario)
     
 @app.route("/teste")
 def teste():
@@ -211,7 +212,7 @@ from app import models
 with app.app_context() as ctx:
     db.create_all()
 
-# 🚀 iniciar servidor quando rodar "python run.py"
+#iniciar servidor quando rodar "python run.py"
 if __name__ == "__main__":
     app.run(debug=True)
 
