@@ -12,7 +12,7 @@ db = SQLAlchemy(app)
 
 @app.route('/') #pra corrigir o erro que tava dando erro em 'usuario"
 def index():
-    usuario = session.get('usuario', {'identificacao': 'usuario'})
+    usuario = session.get('usuario', {'identificacao': 'Visitante'})
     return render_template("index.html", usuario=usuario)
     
 @app.route("/teste")
@@ -175,7 +175,7 @@ def formimputbasic():
 def uitextdivider():
     return render_template("extended-ui-text-divider.html")
 
-@app.route("/forminputgroup")
+@app.route("/dicas")
 def forminputgroup():
     return render_template("forms-input-groups.html")
 
@@ -199,6 +199,8 @@ def login():
         resposta = LoginController.login(formulario)
         if resposta['sexo'] == 'M':
             print('nao pode logar')
+            print(resposta)
+
         else:
             print('pode logar')
             return render_template("index.html", usuario = resposta)
