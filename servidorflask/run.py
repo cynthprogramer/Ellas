@@ -73,9 +73,9 @@ def miscunder():
     return render_template("pages-misc-under-maintenance.html")
 
 
-@app.route("/cardbasic")
-def cardbasic():
-    return render_template("cards-basic.html")
+@app.route("/leis")
+def leis():
+    return render_template("leis.html")
 
 @app.route("/uiaccordion")
 def uiaccordion():
@@ -176,8 +176,8 @@ def uitextdivider():
     return render_template("extended-ui-text-divider.html")
 
 @app.route("/dicas")
-def forminputgroup():
-    return render_template("forms-input-groups.html")
+def dicas():
+    return render_template("dicas.html")
 
 @app.route("/formvertical")
 def formvertical():

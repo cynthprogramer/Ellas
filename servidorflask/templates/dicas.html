@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+
+<!-- =========================================================
+* Sneat - Bootstrap 5 HTML Admin Template - Pro | v1.0.0
+==============================================================
+
+* Product Page: https://themeselection.com/products/sneat-bootstrap-html-admin-template/
+* Created by: ThemeSelection
+* License: You must have a valid license purchased in order to legally use the theme for your project.
+* Copyright ThemeSelection (https://themeselection.com)
+
+=========================================================
+ -->
+<!-- beautify ignore:start -->
+<html
+  lang="pt-br"
+  class="light-style layout-menu-fixed"
+  dir="ltr"
+  data-theme="theme-default"
+  data-assets-path="../assets/"
+  data-template="vertical-menu-template-free"
+>
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0"
+    />
+
+    <title>Dicas</title>
+    <script async defer src="https://buttons.github.io/buttons.js"></script>
+
+    <meta name="description" content="" />
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="../assets/img/favicon/favicon.ico" />
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Public+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap"
+      rel="stylesheet"
+    />
+
+
+    <!-- Icons. Uncomment required icon fonts -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='vendor/fonts/boxicons.css') }}" />
+
+    <!-- Core CSS --> 
+    <link rel="stylesheet" href="{{ url_for('static', filename='vendor/css/core.css') }}" class="template-customizer-core-css" />
+    <link rel="stylesheet" href="{{ url_for('static', filename='vendor/css/theme-default.css') }}" class="template-customizer-theme-css" />
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/demo.css') }}" />
+
+    <!-- Vendors CSS --> 
+    <link rel="stylesheet" href="{{ url_for('static', filename='vendor/libs/perfect-scrollbar') }}" />
+
+    <link rel="stylesheet" href=" {{ url_for('static', filename='vendor/libs/apex-charts/apex-charts.css') }}" />
+
+    <!-- Page CSS -->
+
+    <!-- Helpers -->
+    <script src="../assets/vendor/js/helpers.js"></script>
+
+    <!--! Template customizer & Theme config files MUST be included after core stylesheets and helpers.js in the <head> section -->
+    <!--? Config:  Mandatory theme config file contain global vars & default theme options, Set your preferred theme option in this file.  -->
+    <script src="../assets/js/config.js"></script>
+  </head>
+
+  <body>
+    <!-- Layout wrapper -->
+    <!-- Layout wrapper -->
+    <div class="layout-wrapper layout-content-navbar">
+
+      <div class="layout-container">
+        <!-- Configurações do menu -->
+        <aside id="layout-menu" class="layout-menu menu-vertical menu bg-menu-theme">
+          <div class="app-brand demo">
+            <a href="{{ url_for('index') }}" class="app-brand-link">
+              <span class="app-brand-logo demo">
+                <img src="{{ url_for('static', filename='img/illustrations/logo-lotus.svg') }}" 
+                    alt="Logo Ellas" 
+                    style="height: 40px;">
+              </span>
+              <span class="app-brand-text demo menu-text fw-bolder ms-2" style="color:#F3E09D;">
+                Ellas
+              </span>
+            </a>
+
+            <a href="javascript:void(0);" class="layout-menu-toggle menu-link text-large ms-auto d-block d-xl-none">
+              <i class="bx bx-chevron-left bx-sm align-middle"></i>
+            </a>
+          </div>
+
+          <div class="menu-inner-shadow"></div>
+
+          <ul class="menu-inner py-1">
+            <!-- Dashboard -->
+            <li class="menu-item active" style="margin-left: 20px;">
+                <a href="{{ url_for('index') }}" class="app-brand-link">
+                    <i class="menu-icon tf-icons bx bx-home-circle"></i>
+                    <div data-i18n="Analytics">MENU</div>
+                </a>
+            </li>
+
+          <!-- menu lateral -->
+           <li class="menu-item"> 
+            <a href="{{ url_for('index') }}" class="menu-link">
+              <i class="menu-icon tf-icons bx bx-home"></i>
+              <div>Página inicial</div>
+            </a>
+          </li>
+           <!-- tematicas -->
+            <li class="menu-header small text-uppercase">
+              <span class="menu-header-text">Temáticas</span>
+            </li>
+        <!-- index para pagina de dicas -->
+            <li class="menu-item">
+              <a href="{{ url_for('dicas') }}" class="menu-link">
+                <i class="menu-icon tf-icons bx bx-dock-top"></i>
+                <div><span class="fw-bold" style="color: #e969c2;">Dicas</span></div>
+              </a>
+            </li>
+          <!-- index para pagina sobre legislação-->
+            <li class="menu-item">
+              <a href="{{ url_for('leis') }}" class="menu-link">
+                <i class="menu-icon tf-icons bx bx-lock-open-alt"></i>
+                <div>Leis</div>
+              </a>
+            </li>
+            <!-- index para pagina de ajuda-->
+            <li class="menu-item">
+              <a href="{{ url_for('teste') }}" class="menu-link">
+                <i class="menu-icon tf-icons bx bx-lock-open-alt"></i>
+                <div>Peça Ajuda</div>
+              </a>
+            </li>
+            <!-- index para pagina de noticias-->
+            <li class="menu-item">
+              <a href="{{ url_for('teste') }}" class="menu-link">
+                <i class="menu-icon tf-icons bx bx-cube-alt"></i>
+                <div>Notícias</div>
+              </a>
+            <!-- index para pagina sobre saude-->
+            <li class="menu-item">
+              <a href="{{ url_for('teste') }}" class="menu-link">
+                <i class="menu-icon tf-icons bx bx-cube-alt"></i>
+                <div>Saúde</div>
+              </a>
+
+            <!-- MAIS -->
+            <li class="menu-header small text-uppercase"><span class="menu-header-text">Mais</span></li>
+            <!-- index para a página sobre nós -->
+             <li class="menu-item"> 
+              <a href="{{ url_for('teste') }}" class="menu-link">
+                <i class="menu-icon tf-icons bx bx-box"></i>
+                <div>Sobre Nós</div>
+              </a>
+            <!-- index para a página de regras -->
+            <li class="menu-item">
+              <a href="{{ url_for('teste') }}" class="menu-link">
+                <i class="menu-icon tf-icons bx bx-box"></i>
+                <div>Regras da Comunidade</div>
+              </a>
+            </li>
+        </aside>
+        <!-- / fim Menu -->
+          <!--colocar um container pequeno falando informações basicas  -->
+
+        <!-- Organanização do layout NAO EXCLUIR -->
+        <div class="layout-page"> 
+
+          <!-- Content wrapper -->
+          <div class="content-wrapper">
+            <!-- Content -->
+
+            <div class="container-xxl flex-grow-1 container-p-y">
+              <div class="card-body d-flex align-items-center justify-content-between" >
+                  <h4 style="color: #ffffff !important">
+                          Autodefesa começa com <span class="fw-bold" style="color: #f7a5de;">informação!</span> Encontre dicas simples, exemplos práticos e orientações que podem fazer a diferença na sua segurança e bem-estar.
+                </h4>
+              </div>
+                <!-- cards -->
+              <div class="row">
+                  <!-- Técnicas de Defesa cotidina -->
+                  <div class="col-md-6">
+                    <div class="card mb-4">
+                      <h5 class="card-header", style="color: #e969c2">Dicas de cuidado em situações cotidianas</h5>
+                      <div class="card-body">
+                        <p style="color: #ffffff;">
+                         É essencial que sejam adotadas algumas técnicas preventivas no dia a dia afim de evitar situações de risco. 
+                         Para te ajudar, reunimos algumas dicas que podem te ajudar a aumentar sua segurança: 
+                        </p>
+                        <ul>
+                          <li style="color: #f7a5de; font-size: large;">
+                            Esteja sempre atenta ao seu redor
+                          </li>
+                          <p style="color: #ffffff;">Evite fones de ouvido ou outras distrações enquanto estiver andando sozinha, 
+                            especialmente em locais públicos pouco iluminados ou pouco movimentados.</p>
+                            <li style="color:#f7a5de; font-size: large;">Tenha itens de segurança</li>
+                            <p style="color: #ffffff;">Adquira itens como spray de pimenta, alarmes pessoais e os use sempre quando necessário. 
+                              E não se esqueça: gritar sempre ajuda.</p>
+                            <li style="color: #f7a5de; font-size: large;">Mantenha postura confiante</li>
+                            <p style="color: #ffffff;">Caminhe mantendo a postura firme, dessa forma pode desencorajar possíveis agressores e 
+                              não distribua risos às pessoas que você não conhece.</p>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- Como agir em caso de violência -->
+                  <div class="col-md-6">
+                    <div class="card mb-4">
+                      <h5 class="card-header" style="color: #e969c2">Como agir em caso de violência?</h5>
+                      <div class="card-body">
+                        <ul style="color: #ffffff;">
+                          <li>Se for com você: procure ajuda imediata.</li>
+                          <li>Se for com terceiros: denuncie.</li>
+                        </ul>
+                        <ol style="color: #ffffff">
+                          <li>
+                          Ligue 180, a <strong><a href="https://www.gov.br/mulheres/pt-br/ligue180" style="color: #f7a5de">Central de Atendimento à Mulher</a></strong>, 
+                          é de graça e funciona 24 horas por dia, 
+                          todos os dias da semana!
+                          </li>
+                          <li>
+                            Registre sua ocorrência em uma delegacia de polícia. 
+                            Dê preferencia às <strong><span style="color: #f7a5de">Delegacias Especiais de Atendimento à Mulher - 
+                            DEAM</span></strong>, funcionam 24 horas e todos os dias. 
+                          </li>
+                        </ol>
+                        <br>
+                        <div class="mb-3 row text-center">
+                          <div class="col-md-6">
+                            <img src="{{ url_for('static', filename='img/illustrations/180.jpg') }}" 
+                                class="img-fluid rounded" alt="180 celular">
+                          </div>
+                          <div class="col-md-6">
+                            <img src="{{ url_for('static', filename='img/illustrations/jornal.jpg') }}" 
+                                class="img-fluid rounded" alt="Jornal sobre violência">
+                                <br>
+                                <br>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="row">
+                  <!--Relação abusiva-->
+                  <div class="col-md-6">
+                    <div class="card mb-4">
+                      <h5 class="card-header" style="color: #e969c2">Como identificar se está em uma relação abusiva</h5>
+                      <div class="card-body">
+                        <p style="color: #ffffff;">
+                          Em um relacionamento abusivo, existem <strong><span style="color: #f7a5de">pelo menos um</span></strong> tipo de violência: verbal,
+                          emocional, psicológica, física e tecnológica (quando há total controle das redes sociais da vítima). <br>
+                          <br>
+                          Nesse tipo de relacionamento há uma relação desigual de poder, quando um se torna dependente do outro, 
+                          gerando sentimentos recorrentes de dúvida, confusão mental, medo, ansiedade e insegurança. <br>
+                          <br>
+                          Também é importante observar atitudes sutis, como o controle sobre amizades, roupas ou decisões pessoais. 
+                          Pequenas humilhações e chantagens emocionais são sinais de alerta que não devem ser ignorados. <br>
+                          <br>
+                          Se você ou alguém próximo estiver vivendo isso, procure apoio imediatamente!!
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!--Segurança na net-->
+                  <div class="col-md-6">
+                    <div class="card mb-4">
+                      <h5 class="card-header" style="color: #e969c2">Como se proteger na Internet?</h5>
+                      <div class="card-body">
+                        <p style="color: #ffffff;">
+                          Fique atenta ao estar navegando no Mundo sem Lei da Internet. 
+                          Manter o controle sobre suas informações é um modo de proteger não só seus dados, mas também a sua liberdade.
+                        </p>
+                        <p style="color: #f7a5de; font-size: large;">Se liga nessas dicas: </p>
+                        <ul>
+                          <li style="color:#ffffff;">
+                            <strong> <span style="color: #e969c2;">Não marque sua localização real</span></strong> em posts e fotos, isso pode permitir que stalkers ou outras pessoas pior 
+                            intencionadas descubram onde vc está;
+                          </li><br>
+                          <li style="color: #ffffff;">
+                              Evite mostrar o rosto ou elementos que revelem sua identidade em fotos ou vídeos pessoais (se é que vc me entende), 
+                              e só compartilhe com pessoas em quem <strong> <span style="color: #e969c2;">realmente </span></strong>confia;
+                          </li><br>
+                          <li style="color: #ffffff;">
+                            Revise as configurações de privacidade nas redes sociais e defina quem pode comentar, marcar ou enviar mensagens;
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+              <div class="suggestion-card">
+                <h5 style="color: #ffffff;">Tem alguma dica que vc acha necessária estar nessa página?</h5>
+                <form>
+                  <textarea placeholder="Escreva sua dica aqui..." rows="3"></textarea>
+                  <div class="btn-container">
+                    <button type="submit">Enviar</button>
+                  </div>
+                </form>
+              </div>
+            </div>
+            <!-- / Content -->
+
+            <!-- Footer -->
+           <footer class="bg-body-tertiary text-center text-lg-start">
+            <!-- Copyright -->
+            <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.05);">
+              © 2025 Copyright Ellas: uma rede de apoio para mulheres do IFRN
+            </div>
+            <!-- Copyright -->
+          </footer>
+
+            <div class="content-backdrop fade"></div>
+          </div>
+          <!-- Content wrapper -->
+        </div>
+        <!-- / Layout page -->
+      </div>
+    <!-- / Layout wrapper -->
+
+    <!-- Core JS -->
+    <!-- build:js assets/vendor/js/core.js -->
+    <script src="../assets/vendor/libs/jquery/jquery.js"></script>
+    <script src="../assets/vendor/libs/popper/popper.js"></script>
+    <script src="../assets/vendor/js/bootstrap.js"></script>
+    <script src="../assets/vendor/libs/perfect-scrollbar/perfect-scrollbar.js"></script>
+
+    <script src="../assets/vendor/js/menu.js"></script>
+    <!-- endbuild -->
+
+    <!-- Vendors JS -->
+
+    <!-- Main JS -->
+    <script src="../assets/js/main.js"></script>
+
+    <!-- Page JS -->
+
+  </body>
+</html>

@@ -236,6 +236,58 @@
 .left-side {
     background-color: transparent; /* remove a cor separada da esquerda */
 }
+.suggestion-card {
+    background-color: #542562; /* cor principal do seu projeto */
+    color: #271a1a;
+    padding: 20px;
+    border-radius: 4px;
+    width: 100%; /* deixa o card mais largo */
+    max-width: 1000px; /* limita pra não ficar exagerado em telas grandes */
+    margin: 20px auto;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+    font-family: Arial, sans-serif;
+}
+
+.suggestion-card h5 {
+    margin-bottom: 15px;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.suggestion-card textarea {
+    width: 100%;
+    padding: 10px;
+    border-radius: 8px;
+    border: none;
+    resize: none;
+    margin-bottom: 15px;
+    font-size: 14px;
+    font-family: inherit;
+    background-color: rgb(217, 158, 235);
+}
+
+.suggestion-card textarea:focus {
+    outline: 2px solid #FFBFBF; /* destaque ao focar */
+    background-color: #fff;
+    color: #000;
+}
+
+.suggestion-card button {
+    background-color: #FFBFBF;
+    color: #311950;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+              
+.btn-container {
+    text-align: right;
+}
 
 
-
+.suggestion-card button:hover {
+    background-color: #a96ce2;
+}
