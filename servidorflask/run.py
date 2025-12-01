@@ -5,6 +5,7 @@ from app.controllers.login_controller import LoginController
 from app.forms.login_form import LoginForm
 
 
+
 app = Flask(__name__)
 app.config.from_object(Config)
 
@@ -51,14 +52,6 @@ def noticacaoes():
 def connections():
     return render_template("pages-account-settings-connections.html")
 
-@app.route("/loginbasic")
-def longinbasic():
-    return render_template("auth-login-basic.html")
-
-@app.route("/cadastro")
-def resgistobasic():
-    return render_template("auth-register-basic.html")
-
 @app.route("/forgotpass")
 def forgotpass():
     return render_template("auth-forgot-password-basic.html")
@@ -71,10 +64,16 @@ def micerror():
 def miscunder():
     return render_template("pages-misc-under-maintenance.html")
 
+<<<<<<< Updated upstream
 
 @app.route("/cardbasic")
 def cardbasic():
     return render_template("cards-basic.html")
+=======
+@app.route("/leis")
+def leis():
+    return render_template("leis.html")
+>>>>>>> Stashed changes
 
 @app.route("/uiaccordion")
 def uiaccordion():
@@ -170,9 +169,9 @@ def iconsbox():
 def formimputbasic():
     return render_template("forms-basic-inputs.html")
 
-@app.route("/uitextdivider")
-def uitextdivider():
-    return render_template("extended-ui-text-divider.html")
+@app.route("/ajuda")
+def ajuda():
+    return render_template("ajuda.html")
 
 @app.route("/forminputgroup")
 def forminputgroup():
@@ -204,6 +203,10 @@ def login():
     return render_template('auth-login-basic.html', title='Login', form = formulario)
 
 
+@app.route("/cadastro")
+def cadastro():
+    return render_template("auth-register-basic.html")
+    
 from app import models
 
 

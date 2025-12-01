@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+
+<!-- =========================================================
+* Sneat - Bootstrap 5 HTML Admin Template - Pro | v1.0.0
+==============================================================
+
+* Product Page: https://themeselection.com/products/sneat-bootstrap-html-admin-template/
+* Created by: ThemeSelection
+* License: You must have a valid license purchased in order to legally use the theme for your project.
+* Copyright ThemeSelection (https://themeselection.com)
+
+=========================================================
+ -->
+<!-- beautify ignore:start -->
+<html
+  lang="en"
+  class="light-style layout-menu-fixed"
+  dir="ltr"
+  data-theme="theme-default"
+  data-assets-path="../assets/"
+  data-template="vertical-menu-template-free"
+>
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0"
+    />
+
+    <title>Onde pedir ajuda</title>
+
+    <meta name="description" content="" />
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="../assets/img/favicon/favicon.ico" />
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Public+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Icons. Uncomment required icon fonts -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='vendor/fonts/boxicons.css') }}" />
+
+    <!-- Core CSS --> 
+    <link rel="stylesheet" href="{{ url_for('static', filename='vendor/css/core.css') }}" class="template-customizer-core-css" />
+    <link rel="stylesheet" href="{{ url_for('static', filename='vendor/css/theme-default.css') }}" class="template-customizer-theme-css" />
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/demo.css') }}" />
+
+    <!-- Vendors CSS --> 
+    <link rel="stylesheet" href="{{ url_for('static', filename='vendor/libs/perfect-scrollbar') }}" />
+
+    <link rel="stylesheet" href=" {{ url_for('static', filename='vendor/libs/apex-charts/apex-charts.css') }}" />
+
+    <!-- Page CSS -->
+
+    <!-- Helpers -->
+    <script src="../assets/vendor/js/helpers.js"></script>
+
+    <!--! Template customizer & Theme config files MUST be included after core stylesheets and helpers.js in the <head> section -->
+    <!--? Config:  Mandatory theme config file contain global vars & default theme options, Set your preferred theme option in this file.  -->
+    <script src="../assets/js/config.js"></script>
+  </head>
+
+  <body>
+    <!-- Layout wrapper -->
+    <div class="layout-wrapper layout-content-navbar">
+      <div class="layout-container">
+        <!-- Configurações do menu -->
+        <aside id="layout-menu" class="layout-menu menu-vertical menu bg-menu-theme">
+          <div class="app-brand demo">
+            <a href="{{ url_for('index') }}" class="app-brand-link">
+              <span class="app-brand-logo demo">
+                <img src="{{ url_for('static', filename='img/illustrations/logo-lotus.svg') }}" 
+                    alt="Logo Ellas" 
+                    style="height: 40px;">
+              </span>
+              <span class="app-brand-text demo menu-text fw-bolder ms-2" style="color:#F3E09D;">
+                Ellas
+              </span>
+            </a>
+
+            <a href="javascript:void(0);" class="layout-menu-toggle menu-link text-large ms-auto d-block d-xl-none">
+              <i class="bx bx-chevron-left bx-sm align-middle"></i>
+            </a>
+          </div>
+
+          <div class="menu-inner-shadow"></div>
+
+          <ul class="menu-inner py-1">
+            <!-- Dashboard -->
+            <li class="menu-item active" style="margin-left: 20px;">
+                <a href="{{ url_for('index') }}" class="app-brand-link">
+                    <i class="menu-icon tf-icons bx bx-home-circle"></i>
+                    <div data-i18n="Analytics">MENU</div>
+                </a>
+            </li>
+
+          <!-- menu lateral -->
+           <li class="menu-item"> 
+            <a href="{{ url_for('index') }}" class="menu-link">
+              <i class="menu-icon tf-icons bx bx-home"></i>
+              <div>Página inicial</div>
+            </a>
+          </li>
+           <!-- tematicas -->
+            <li class="menu-header small text-uppercase">
+              <span class="menu-header-text">Temáticas</span>
+            </li>
+        <!-- index para pagina de dicas -->
+            <li class="menu-item">
+              <a href="{{ url_for('dicas') }}" class="menu-link">
+                <i class="menu-icon tf-icons bx bx-dock-top"></i>
+                <div>Dicas</div>
+              </a>
+            </li>
+          <!-- index para pagina sobre legislação-->
+            <li class="menu-item">
+              <a href="{{ url_for('leis') }}" class="menu-link">
+                <i class="menu-icon tf-icons bx bx-lock-open-alt"></i>
+                <div>Legislação</div>
+              </a>
+            </li>
+            <!-- index para pagina de ajuda-->
+            <li class="menu-item">
+              <a href="{{ url_for('ajuda') }}" class="menu-link">
+                <i class="menu-icon tf-icons bx bx-lock-open-alt"></i>
+                <div> <span class="fw-bold" style="color: #e969c2;">Peça Ajuda</span></div>
+              </a>
+            </li>
+            <!-- index para pagina sobre saude-->
+            <li class="menu-item">
+              <a href="{{ url_for('teste') }}" class="menu-link">
+                <i class="menu-icon tf-icons bx bx-cube-alt"></i>
+                <div>Saúde</div>
+              </a>
+
+            <!-- MAIS -->
+            <li class="menu-header small text-uppercase"><span class="menu-header-text">Mais</span></li>
+            <!-- index para a página sobre nós -->
+             <li class="menu-item"> 
+              <a href="{{ url_for('teste') }}" class="menu-link">
+                <i class="menu-icon tf-icons bx bx-box"></i>
+                <div>Sobre Nós</div>
+              </a>
+            <!-- index para a página de regras -->
+            <li class="menu-item">
+              <a href="{{ url_for('teste') }}" class="menu-link">
+                <i class="menu-icon tf-icons bx bx-box"></i>
+                <div>Regras da Comunidade</div>
+              </a>
+            </li>
+        </aside>
+        <!-- / fim Menu -->
+
+        <!-- Layout container -->
+        <div class="layout-page">
+          <!-- Content wrapper -->
+          <div class="container my-5">
+            <h3 class="text-center mb-4" style="color: #e969c2;">Saiba como e onde buscar ajuda no IFCM</h3>
+
+            <div class="row g-4">
+              <!-- Card 1 -->
+              <div class="col-md-4 col-lg-3">
+                <div class="help-card p-3 h-100">
+                  <h5 class="fw-bold mb-2 text-center">Ouvidoria IFRN</h5>
+                  <p class="mb-0" style="text-align: justify;">
+                    A ouvidoria é um canal de comunicação entre a sociedade com o IFRN, 
+                    onde você pode registrar suas reclamações, denúncias, elogios, solicitações ou 
+                    sugestões para a Instituição. 
+                    Você pode registrar sua ocorrência na Plataforma Integrada de Ouvidoria e Acesso à Informação
+                     - FalaBr, onde é preciso se cadastrar com uma conta gov.br.
+                  </p>
+                </div>
+              </div>
+
+              <!-- Card 2 -->
+              <div class="col-md-4 col-lg-3">
+                <div class="help-card p-3 h-100">
+                  <h5 class="fw-bold mb-2 text-center">ETEP</h5>
+                  <p class="mb-0" style="text-align: justify;">
+                     A equipe Técnico-pedagógica do campus é responsável por atividades pedagógicas e administrativas 
+                     voltadas para a gestão educacional da unidade. Lá vc pode registrar sua queixa acerca de qualquer ocorrido. 
+
+                  </p>
+                </div>
+              </div>
+
+              <!-- Card 3 -->
+              <div class="col-md-4 col-lg-3">
+                <div class="help-card p-3 h-100">
+                  <h5 class="fw-bold mb-2 text-center">CASA DA MULHER BRASILEIRA</h5>
+                  <p class="mb-0 text-center">
+                    Acolhimento por equipe multidisciplinar, encaminhamento para serviços de atendimento e registro de ocorrência.
+                  </p>
+                </div>
+              </div>
+
+              <!-- Exemplo de outros cards -->
+              <div class="col-md-4 col-lg-3">
+                <div class="help-card p-3 h-100">
+                  <h5 class="fw-bold mb-2 text-center">DEFENSORIA PÚBLICA</h5>
+                  <p class="mb-0 text-center">
+                    Atendimento jurídico, incluindo medidas protetivas e orientações sobre direitos das mulheres.
+                  </p>
+                </div>
+              </div>
+
+              <!-- Continue com os demais cards conforme a imagem -->
+            </div>
+          </div>
+            <!-- Footer -->
+            <footer class="bg-body-tertiary text-center text-lg-start">
+            <!-- Copyright -->
+            <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.05);">
+              © 2025 Copyright Ellas: uma rede de apoio digital para mulheres do IFRN
+            </div>
+            <!-- Copyright -->
+            <!-- / Footer -->
+
+            <div class="content-backdrop fade"></div>
+          </div>
+          <!-- Content wrapper -->
+        </div>
+        <!-- / Layout page -->
+      </div>
+
+      <!-- Overlay -->
+      <div class="layout-overlay layout-menu-toggle"></div>
+    </div>
+    <!-- / Layout wrapper -->
+
+    <!-- Core JS -->
+    <!-- build:js assets/vendor/js/core.js -->
+    <script src="../assets/vendor/libs/jquery/jquery.js"></script>
+    <script src="../assets/vendor/libs/popper/popper.js"></script>
+    <script src="../assets/vendor/js/bootstrap.js"></script>
+    <script src="../assets/vendor/libs/perfect-scrollbar/perfect-scrollbar.js"></script>
+
+    <script src="../assets/vendor/js/menu.js"></script>
+    <!-- endbuild -->
+
+    <!-- Vendors JS -->
+
+    <!-- Main JS -->
+    <script src="../assets/js/main.js"></script>
+
+    <!-- Page JS -->
+
+    <!-- Place this tag in your head or just before your close body tag. -->
+    <script async defer src="https://buttons.github.io/buttons.js"></script>
+  </body>
+</html>

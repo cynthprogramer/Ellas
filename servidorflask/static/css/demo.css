@@ -149,6 +149,7 @@
 .card h6,
 .card small {
   color: #F3E09D !important; /* roxo escuro da paleta */
+  text-align: left;
 }
 
 
@@ -236,3 +237,112 @@
 .left-side {
     background-color: transparent; /* remove a cor separada da esquerda */
 }
+<<<<<<< Updated upstream
+=======
+.suggestion-card {
+    background-color: #542562; /* cor principal do seu projeto */
+    color: #271a1a;
+    padding: 20px;
+    border-radius: 4px;
+    width: 100%; /* deixa o card mais largo */
+    max-width: 1000px; /* limita pra não ficar exagerado em telas grandes */
+    margin: 20px auto;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+    font-family: Arial, sans-serif;
+}
+
+.suggestion-card h5 {
+    margin-bottom: 15px;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.suggestion-card textarea {
+    width: 100%;
+    padding: 10px;
+    border-radius: 8px;
+    border: none;
+    resize: none;
+    margin-bottom: 15px;
+    font-size: 14px;
+    font-family: inherit;
+    background-color: rgb(217, 158, 235);
+}
+
+.suggestion-card textarea:focus {
+    outline: 2px solid #FFBFBF; /* destaque ao focar */
+    background-color: #fff;
+    color: #000;
+}
+
+.suggestion-card button {
+    background-color: #FFBFBF;
+    color: #311950;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+              
+.btn-container {
+    text-align: right;
+}
+
+
+.suggestion-card button:hover {
+    background-color: #a96ce2;
+}
+
+.help-card {
+  background-color: #F8F0F8; /* tom suave lilás */
+  border: 2px dashed #C7A3C7; /* borda pontilhada rosa/lilás */
+  border-radius: 10px;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+}
+
+.help-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.help-card h5 {
+  color: #542562; /* cor principal do projeto Ellas */
+  font-size: 1rem;
+}
+
+.help-card p {
+  font-size: 0.9rem;
+  color: #333;
+}
+
+/* Botão principal Ellas */
+.btn-ellas {
+  background-color: #FFBFBF; /* rosa claro da paleta */
+  color: #311950; /* roxo escuro para o texto */
+  border: none;
+  border-radius: 30px;
+  font-weight: 600;
+  padding: 10px 25px;
+  box-shadow: 0 4px 10px rgba(233, 72, 72, 0.4);
+  transition: all 0.3s ease-in-out;
+}
+
+/* Efeito ao passar o mouse */
+.btn-ellas:hover {
+  background-color: #F3E09D; /* amarelo da paleta */
+  color: #311950;
+  box-shadow: 0 4px 15px rgba(243, 224, 157, 0.6);
+  transform: scale(1.05);
+}
+
+/* Ajuste da posição fixa (como no print) */
+.buy-now {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  z-index: 9999;
+}
+>>>>>>> Stashed changes
