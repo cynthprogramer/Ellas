@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+
+<!-- =========================================================
+* Sneat - Bootstrap 5 HTML Admin Template - Pro | v1.0.0
+==============================================================
+
+* Product Page: https://themeselection.com/products/sneat-bootstrap-html-admin-template/
+* Created by: ThemeSelection
+* License: You must have a valid license purchased in order to legally use the theme for your project.
+* Copyright ThemeSelection (https://themeselection.com)
+
+=========================================================
+ -->
+<!-- beautify ignore:start -->
+<html
+  lang="pt-br"
+  class="light-style layout-menu-fixed"
+  dir="ltr"
+  data-theme="theme-default"
+  data-assets-path="../assets/"
+  data-template="vertical-menu-template-free"
+>
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0"
+    />
+
+    <title>Leis</title>
+
+    <meta name="description" content="" />
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="../assets/img/favicon/favicon.ico" />
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Public+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Icons. Uncomment required icon fonts -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='vendor/fonts/boxicons.css') }}" />
+
+    <!-- Core CSS --> 
+    <link rel="stylesheet" href="{{ url_for('static', filename='vendor/css/core.css') }}" class="template-customizer-core-css" />
+    <link rel="stylesheet" href="{{ url_for('static', filename='vendor/css/theme-default.css') }}" class="template-customizer-theme-css" />
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/demo.css') }}" />
+
+    <!-- Vendors CSS --> 
+    <link rel="stylesheet" href="{{ url_for('static', filename='vendor/libs/perfect-scrollbar') }}" />
+
+    <link rel="stylesheet" href=" {{ url_for('static', filename='vendor/libs/apex-charts/apex-charts.css') }}" />
+
+    <!-- Page CSS -->
+
+    <!-- Helpers -->
+    <script src="../assets/vendor/js/helpers.js"></script>
+
+    <!--! Template customizer & Theme config files MUST be included after core stylesheets and helpers.js in the <head> section -->
+    <!--? Config:  Mandatory theme config file contain global vars & default theme options, Set your preferred theme option in this file.  -->
+    <script src="../assets/js/config.js"></script>
+  </head>
+
+  <body>
+    <!-- Layout wrapper -->
+    <!-- Layout wrapper -->
+    <div class="layout-wrapper layout-content-navbar">
+
+      <div class="layout-container">
+        <!-- Configurações do menu -->
+        <aside id="layout-menu" class="layout-menu menu-vertical menu bg-menu-theme">
+          <div class="app-brand demo">
+            <a href="{{ url_for('index') }}" class="app-brand-link">
+              <span class="app-brand-logo demo">
+                <img src="{{ url_for('static', filename='img/illustrations/logo-lotus.svg') }}" 
+                    alt="Logo Ellas" 
+                    style="height: 40px;">
+              </span>
+              <span class="app-brand-text demo menu-text fw-bolder ms-2" style="color:#F3E09D;">
+                Ellas
+              </span>
+            </a>
+
+            <a href="javascript:void(0);" class="layout-menu-toggle menu-link text-large ms-auto d-block d-xl-none">
+              <i class="bx bx-chevron-left bx-sm align-middle"></i>
+            </a>
+          </div>
+
+          <div class="menu-inner-shadow"></div>
+
+          <ul class="menu-inner py-1">
+            <!-- Dashboard -->
+            <li class="menu-item active" style="margin-left: 20px;">
+                <a href="{{ url_for('index') }}" class="app-brand-link">
+                    <i class="menu-icon tf-icons bx bx-home-circle"></i>
+                    <div data-i18n="Analytics">MENU</div>
+                </a>
+            </li>
+
+          <!-- menu lateral -->
+           <li class="menu-item"> 
+            <a href="{{ url_for('index') }}" class="menu-link">
+              <i class="menu-icon tf-icons bx bx-home"></i>
+              <div>Página inicial</div>
+            </a>
+          </li>
+           <!-- tematicas -->
+            <li class="menu-header small text-uppercase">
+              <span class="menu-header-text">Temáticas</span>
+            </li>
+        <!-- index para pagina de dicas -->
+            <li class="menu-item">
+              <a href="{{ url_for('dicas') }}" class="menu-link">
+                <i class="menu-icon tf-icons bx bx-dock-top"></i>
+                <div>Dicas</div>
+              </a>
+            </li>
+          <!-- index para pagina sobre legislação-->
+            <li class="menu-item">
+              <a href="{{ url_for('teste') }}" class="menu-link">
+                <i class="menu-icon tf-icons bx bx-lock-open-alt"></i>
+                <div> <span class="fw-bold" style="color: #e969c2;">Legislação</span></div>
+              </a>
+            </li>
+            <!-- index para pagina de ajuda-->
+            <li class="menu-item">
+              <a href="{{ url_for('ajuda') }}" class="menu-link">
+                <i class="menu-icon tf-icons bx bx-lock-open-alt"></i>
+                <div>Peça Ajuda</div>
+              </a>
+            </li>
+            <!-- index para pagina sobre saude-->
+            <li class="menu-item">
+              <a href="{{ url_for('teste') }}" class="menu-link">
+                <i class="menu-icon tf-icons bx bx-cube-alt"></i>
+                <div>Saúde</div>
+              </a>
+
+            <!-- MAIS -->
+            <li class="menu-header small text-uppercase"><span class="menu-header-text">Mais</span></li>
+            <!-- index para a página sobre nós -->
+             <li class="menu-item"> 
+              <a href="{{ url_for('teste') }}" class="menu-link">
+                <i class="menu-icon tf-icons bx bx-box"></i>
+                <div>Sobre Nós</div>
+              </a>
+            <!-- index para a página de regras -->
+            <li class="menu-item">
+              <a href="{{ url_for('teste') }}" class="menu-link">
+                <i class="menu-icon tf-icons bx bx-box"></i>
+                <div>Regras da Comunidade</div>
+              </a>
+            </li>
+        </aside>
+        <!-- / fim Menu -->
+    
+        <!-- Layout container -->
+        <div class="layout-page">
+          <!-- Navbar -->
+          <!-- Content wrapper -->
+          <div class="content-wrapper">
+
+            <!-- Violencia digital -->
+
+            <div class="container-xxl flex-grow-1 container-p-y">
+              <h4 class="fw-bold py-3 mb-4"><span class="text-muted fw-light">Direitos e legislações nos protegem</h4>
+              <p style="color: #ffffff; font-size: large;">"É necessário que as mulheres tenham noção de seus direitos. É preciso, em primeiro lugar, informá-las que têm direitos; em segundo, quais são e que elas podem exigir esses direitos; e, em terceiro, aonde ir para exigi-los." <br>
+                —<strong style="color: #e969c2;">Silvia Pimentel</strong>, professora de Filosofia do Direito da PUC/SP</p>
+              <h4 class="fw-bold py-3 mb-4"><span class="text-muted fw-light">Violência digital</h4>
+                <p style="color: #ffffff; font-size: large;">A jurisdição brasileira ainda <strong><span style="color: #e969c2;">não</span></strong> tem um tipo penal específico para
+                  incriminar ocorrências de violação digital contra mulheres. Entretanto existem meios em que você pode se apoiar caso algo aconteça:</p>
+
+              <!-- Card1 -->
+              <div class="row mb-5">
+                <div class="col-md-6 col-lg-4 mb-3">
+                  <div class="card h-100">
+                    <img src="{{ url_for('static', filename='img/illustrations/eca.jpg') }}">
+                    <div class="card-body">
+                      <h5 class="card-title">Estatuto da Criança e do Adolescente te protege!</h5>
+                      <p class="card-text">
+                        Se a vitima for menor de 18 anos, se ocorrer a divulgação de vídeo ou fotografia ou outro registro que 
+                        contenha sexo explícito ou pornografia com criança ou adolescente, o culpado estará propenso a pena de 
+                        prisão de 3 (três) a 6 (seis) anos, e multa.
+                      </p>
+                      <p class="card-text">O ECA possui diversos artigos que protegem a criança e/ou adolescentes contra violência digital.</p>
+                      <a href="https://www.gov.br/mdh/pt-br/assuntos/noticias/2021/julho/trinta-e-um-anos-do-estatuto-da-crianca-e-do-adolescente-confira-as-novas-acoes-para-fortalecer-o-eca/ECA2021_Digital.pdf" 
+                      class="btn-ellas" target="_blank">Conheça o ECA</a>
+                    </div>
+                  </div>
+                </div>
+                <!-- /Card1 -->
+
+                <!-- Card2 -->
+                <div class="col-md-6 col-lg-4 mb-3">
+                  <div class="card h-100">
+                    <div class="card-body">
+                      <h5 class="card-title">Stalking virou crime no Brasil!</h5>
+                      <p class="card-text">Promulgada em 31 de março de 2025, a Lei nº 14.132 acrescentou o Artigo 147-A ao Código Penal, 
+                        que criminaliza a perseguição reiterada a alguém por qualquer meio, quando essa conduta ameaça sua integridade 
+                        física ou psicológica, restringe sua locomoção ou invade sua liberdade e privacidade.</p>
+                    </div>
+                    <img class="img-fluid" src="{{ url_for('static', filename='img/illustrations/stalking.jpg') }}" alt="Card image cap" />
+                    <div class="card-body">
+                      <p class="card-text">No meio da internet, perseguir, vigiar e monitorar, além de enviar mensagens persistentes e ameaçadoras é visto como Stalking. 
+                        Ou seja: essa prática agora é considerada crime no Brasil e pode resultar em pena de prisão de até 2 anos, além de multa, especialmente quando afeta 
+                        a liberdade e a segurança da vítima.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                 <!-- /Card2 -->
+
+                <!-- Card3 -->
+                <div class="col-md-6 col-lg-4 mb-3">
+                  <div class="card h-100">
+                    <img src="{{ url_for('static', filename='img/illustrations/cyberbullying.jpg') }}">
+                    <div class="card-body">
+                      <h5 class="card-title">Cyberbullying</h5>
+                      <p class="card-text">É o bullying praticado no ambiente virtual, por meio de ações repetitivas que assustam, 
+                        ofendem ou envergonham uma ou mais vítimas. Com a Lei nº 14.811/2024, essa violação passou a ser considerada 
+                        crime no Brasil quando a vítima é menor de idade.</p>
+                      <p class="card-text">A nova lei, além de assegurar proteção às crianças e adolescentes no âmbito escolar,
+                         estabelece ao praticante de cyberbullying a pena de 2 a 4 anos de prisão, além de multa, caso o crime não seja mais grave.</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- /Card3 -->
+
+              <!-- Violência doméstica-->
+              <h4 class="fw-bold py-3 mb-4"><span class="text-muted fw-light">Violência doméstica</h4>
+                <p style="color: #ffffff; font-size: large;">A consolidação de medidas de proteção às mulheres no Brasil reflete mudanças sociais e institucionais 
+                  iniciadas ainda na Constituição de 1988 e foi a Lei Maria da Penha, em 2006, que representou um marco nesse processo. Abaixo reunimos as leis e serviços que protegem 
+                  as mulheres em casos de violência doméstica. </p>
+              <div class="row mb-5">
+                <div class="col-md-6 col-lg-4">
+                  <h6 class="mt-2 text-muted" style="color: #e969c2;">Lei Maria da Penha (Lei nº 11.340/2006)</h6>
+                  <div class="card mb-4">
+                    <div class="card-body">
+                      <p class="card-text">
+                        Criada para prevenir e combater a violência doméstica e familiar contra a mulher. Define diferentes tipos de violência: 
+                        física, psicológica, sexual, patrimonial e moral. Ela garante medidas protetivas de urgência, além de assistência jurídica 
+                        e social às vítimas. 
+                      </p>
+                    </div>
+                  </div>
+                  
+                </div>
+                <div class="col-md-6 col-lg-4">
+                  <h6 class="mt-2 text-muted">Lei Rose Leonel (Lei n° 13.772/2018)</h6>
+                  <div class="card mb-4">
+                    <div class="card-body">
+                      <p class="card-text">
+                        Reconhece a violação da intimidade da mulher como forma de violência doméstica. 
+                        Criminaliza o registro e a divulgação não autorizada de imagens íntimas, protegendo 
+                        especialmente as vítimas de exposição na internet.
+                      </p>
+                      <br>
+                      <br>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                  <h6 class="mt-2 text-muted"> Lei nº 14.994/2024</h6>
+                  <div class="card">
+                    <div class="card-body">
+                      <p class="card-text">Conhecida como o “pacote anti feminicídio”, essa lei tornou o feminicídio um crime 
+                        independente, com pena de 20 a 40 anos de prisão. Ela também aumenta as punições para outros crimes 
+                        cometidos contra mulheres por razões de gênero, como agressões e ameaças, e reforça medidas de proteção 
+                        previstas na Lei Maria da Penha.</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="row mb-5">
+                <div class="col-md-6 col-lg-4 mb-3">
+                  <h6 class="mt-2 text-muted">Lei do Minuto Seguinte</h6>
+                  <div class="card">
+                    <div class="card-body">
+                      <p class="card-text">
+                        A Lei nº 12.845/2013, garante atendimento humanizado, imediato e integral pelo SUS às vítimas de 
+                        violência sexual, sem exigir boletim de ocorrência prévio.
+                      </p>
+                      <br>
+                      <br>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-6 col-lg-4 mb-3">
+                  <h6 class="mt-2 text-muted">Lei n° 13.882/2021</h6>
+                  <div class="card">
+                    <div class="card-body">
+                        <p class="card-text">
+                          Garante prioridade para mulheres vítimas de violência doméstica matricularem ou transferirem 
+                          seus filhos para escolas próximas de casa, podendo o juiz autorizar mesmo sem vaga disponível. 
+                        </p>
+                        <br>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-6 col-lg-4 mb-3">
+                  <h6 class="mt-2 text-muted">Lei Joana Maranhão (Lei n° 12.650/2015)</h6>
+                  <div class="card text-center">
+                    <div class="card-body">
+                      <p class="card-text">Estende o prazo de prescrição para crimes sexuais cometidos contra crianças e 
+                        adolescentes. Dessa forma garante chance de responsabilização dos agressores e assim impulsiona 
+                        proteção e justiça para milhares de crianças e adolescentes no país.</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Violencia sexual-->
+              <h4 class="fw-bold py-3 mb-4"><span class="text-muted fw-light">Violência sexual</h4>
+                <p style="color: #ffffff; font-size: large;">A violência sexual é um problema que ocorre em todas as partes do 
+                  mundo e pode afetar pessoas de diferentes idades, classes sociais, etnias e gêneros. No entanto, as mulheres 
+                  continuam sendo as principais vítimas, e o risco é ainda maior entre jovens e adolescentes, que estão mais vulneráveis 
+                  a esse tipo de agressão ao longo de suas vidas. <br>
+                </p>
+              <div class="row mb-5">
+                <div class="col-md-6 col-lg-4">
+                  <div class="card mb-3">
+                    <div class="card-body">
+                      <h5 class="card-title">As mulheres têm direito a: </h5>
+                      <ul style="color: #fffcfe;">
+                        <li>Atendimento médico e psicossocial especializado (Lei nº 12.845/2013);</li>
+                        <li> Exames e profilaxias contra gravidez e DSTs;</li>
+                        <li>Registro facilitado da ocorrência e encaminhamento ao corpo de delito;</li>
+                        <li>Preservação de provas contra o agressor.</li>
+                      </ul>
+                      <br>
+                    
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                  <div class="card mb-3">
+                    <div class="card-body">
+                      <h5 class="card-title">Lei nº 14.540/2023</h5>
+                      <p class="card-text">Criou o <strong style="color: #e969c2;">Programa de Prevenção e Enfrentamento ao Assédio Sexual e à Violência Sexual </strong>dentro de órgãos públicos 
+                        (como escolas, prefeituras, universidades e repartições).</p>
+                      <p class="card-text">A lei prevê campanhas educativas, treinamentos para identificar o assédio, canais seguros de denúncia e regras 
+                        claras para investigar e punir os agressores.</p>
+                        
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                  <div class="card mb-3">
+                    <div class="card-body">
+                      <h5 class="card-title">Ato sexual sem consentimento</h5>
+                      <p class="card-text">A legislação brasileira determina que <strong style="color: #e969c2;">qualquer ato sexual</strong> sem consentimento da mulher é estupro, inclusive dentro do casamento, 
+                        com base na Lei nº 12.015/2009.</p>
+                        <p class="card-text">Caso a mulher deseje denunciar o agressor ou solicitar medida protetiva, garantida pela Lei Maria da Penha, 
+                          profissionais de saúde devem direcioná-la à Delegacia da Mulher mais próxima. </p>
+                      
+                    </div>
+                  </div>
+                </div>
+                <div class="suggestion-card">
+                <h5 style="color: #ffffff;">Tem alguma legislação que vc acha necessária estar nessa página?</h5>
+                <form>
+                  <textarea placeholder="Acrescente aqui que iremos analisa-la..." rows="3"></textarea>
+                  <div class="btn-container">
+                    <button type="submit">Enviar</button>
+                  </div>
+                </form>
+              </div>
+              </div>
+              <!--/ Text alignment -->
+              <!--/ Card layout -->
+            </div>
+            <!-- / Content -->
+
+            <!-- Footer -->
+            <footer class="bg-body-tertiary text-center text-lg-start">
+            <!-- Copyright -->
+            <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.05);">
+              © 2025 Copyright Ellas: uma rede de apoio digital para mulheres do IFRN
+            </div>
+            <!-- Copyright -->
+            <!-- / Footer -->
+
+            <div class="content-backdrop fade"></div>
+          </div>
+          <!-- Content wrapper -->
+        </div>
+        <!-- / Layout page -->
+      </div>
+
+      <!-- Overlay -->
+      <div class="layout-overlay layout-menu-toggle"></div>
+    </div>
+    <!-- / Layout wrapper -->
+
+    <!-- Core JS -->
+    <!-- build:js assets/vendor/js/core.js -->
+    <script src="../assets/vendor/libs/jquery/jquery.js"></script>
+    <script src="../assets/vendor/libs/popper/popper.js"></script>
+    <script src="../assets/vendor/js/bootstrap.js"></script>
+    <script src="../assets/vendor/libs/perfect-scrollbar/perfect-scrollbar.js"></script>
+
+    <script src="../assets/vendor/js/menu.js"></script>
+    <!-- endbuild -->
+
+    <!-- Vendors JS -->
+    <script src="../assets/vendor/libs/masonry/masonry.js"></script>
+
+    <!-- Main JS -->
+    <script src="../assets/js/main.js"></script>
+
+    <!-- Page JS -->
+
+    <!-- Place this tag in your head or just before your close body tag. -->
+    <script async defer src="https://buttons.github.io/buttons.js"></script>
+  </body>
+</html>

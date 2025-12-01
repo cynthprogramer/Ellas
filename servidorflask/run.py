@@ -65,11 +65,14 @@ def miscunder():
     return render_template("pages-misc-under-maintenance.html")
 
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 
 @app.route("/cardbasic")
 def cardbasic():
     return render_template("cards-basic.html")
 =======
+=======
+>>>>>>> Stashed changes
 @app.route("/leis")
 def leis():
     return render_template("leis.html")
